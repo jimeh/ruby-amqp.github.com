@@ -182,7 +182,9 @@ end
 <p>Command pattern is very similar to Request/Reply, except that there is no reply and messages are typed. For example, most modern Webapplications have at least one &#8220;background task processor&#8221; that carries out a number of operations asynchronously,without sending any responses back. Command pattern usually assumes 1:1 communication.</p>
 <p>Some specific examples of Command pattern are:</p>
 <ul>
-	<li>Account termination in a Web app triggers information archiving (or deletion) that is done by a separate app &#8220;in the background&#8221;.  * After a document or profile update, a Web app sends out commands to a search indexer application.  * Virtual machines control dashboard app sends virtual machine controller application a command to reboot.</li>
+	<li>Account termination in a Web app triggers information archiving (or deletion) that is done by a separate app &#8220;in the background&#8221;.</li>
+	<li>After a document or profile update, a Web app sends out commands to a search indexer application.</li>
+	<li>Virtual machines control dashboard app sends virtual machine controller application a command to reboot.</li>
 </ul>
 <h3><span class="caps">AMQP</span>-based implementation</h3>
 <p>Implementation of Command pattern on top of <span class="caps">AMQP</span> 0.9.1 involves well-known durable queues. Application that issues the commandthen can use default exchange to publish messages to well-known services directly. Request message :type attribute then indicatescommand type and message body (or body and headers) carry additional information consumer needs to carry it out.</p>
