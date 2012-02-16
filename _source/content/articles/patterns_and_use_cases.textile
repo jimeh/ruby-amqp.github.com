@@ -88,7 +88,9 @@ Command pattern is very similar to Request/Reply, except that there is no reply 
 
 Some specific examples of Command pattern are:
 
- * Account termination in a Web app triggers information archiving (or deletion) that is done by a separate app "in the background".  * After a document or profile update, a Web app sends out commands to a search indexer application.  * Virtual machines control dashboard app sends virtual machine controller application a command to reboot.
+ * Account termination in a Web app triggers information archiving (or deletion) that is done by a separate app "in the background".
+ * After a document or profile update, a Web app sends out commands to a search indexer application.
+ * Virtual machines control dashboard app sends virtual machine controller application a command to reboot.
 
 h3. AMQP-based implementation
 
