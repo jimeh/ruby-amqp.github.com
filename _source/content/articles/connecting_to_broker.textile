@@ -149,7 +149,7 @@ When not passing a block to {% yard_link AMQP.connect %}, it is tempting to "giv
 
 h3. Detecting TCP connection failures
 
-When applications connect to the broker, they need to handle connection failures. Networks are not 100% reliable and even with modern system configuration tools, like "Chef":http://http://www.opscode.com/chef or "Puppet":http://http://www.puppetlabs.com, misconfigurations can happen. Also, the broker might be down for some reason. Ideally, error detection should happen as early as possible. There are two ways of detecting TCP connection failure, the first one is to catch an exception:
+When applications connect to the broker, they need to handle connection failures. Networks are not 100% reliable and even with modern system configuration tools, like "Chef":http://www.opscode.com/chef or "Puppet":http://www.puppetlabs.com, misconfigurations can happen. Also, the broker might be down for some reason. Ideally, error detection should happen as early as possible. There are two ways of detecting TCP connection failure, the first one is to catch an exception:
 
 <pre>#!/usr/bin/env ruby
 # encoding: utf-8
